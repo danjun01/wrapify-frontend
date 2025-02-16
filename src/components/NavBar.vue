@@ -19,19 +19,19 @@ import {
 
       <NavigationMenuItem>
         <NavigationMenuLink>
-          <RouterLink class="py-2 px-4 rounded-md" to="/#about" replace>About</RouterLink>
+          <RouterLink class="py-2 px-4 rounded-md" to="/wrap" replace>My Wrap</RouterLink>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
       <NavigationMenuItem>
         <NavigationMenuLink>
-          <RouterLink class="py-2 px-4 rounded-md" to="/#about" replace>About</RouterLink>
+          <RouterLink class="bg-green-600 py-2 px-4 rounded-md" to="/login" replace>Login</RouterLink>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
       <NavigationMenuItem>
         <NavigationMenuLink>
-          <RouterLink class="py-2 px-4 rounded-md" to="/#about" replace>About</RouterLink>
+          <RouterLink class="bg-green-600 py-2 px-4 rounded-md" to="/register" replace>Sign Up</RouterLink>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
