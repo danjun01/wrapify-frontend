@@ -3,10 +3,12 @@ import './assets/main.css'
 import App from './App.vue'
 import { createWebHistory, createRouter } from 'vue-router';
 import HomeView from './pages/HomeView.vue';
+import SpotifyAuthRedirect from './pages/SpotifyAuthRedirect.vue';
 
 
 const routes = [
     { path: '/', component: HomeView },
+    { path: '/auth/callback', component: SpotifyAuthRedirect}
   ]
   
   const router = createRouter({
