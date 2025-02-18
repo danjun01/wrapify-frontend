@@ -14,24 +14,24 @@ import {
 </script>
 
 <template>
-  <NavigationMenu :class="navigationMenuTriggerStyle()" class="rounded-md dark:text-white">
+  <NavigationMenu :class="navigationMenuTriggerStyle()" class="flex items-center rounded-none justify-center min-w-full text-zinc-900 border-y-1 border-zinc-600 bg">
     <NavigationMenuList class="gap-6">
 
       <NavigationMenuItem>
         <NavigationMenuLink>
-          <RouterLink class="py-2 px-4 rounded-md" to="/wrap" replace>My Wrap</RouterLink>
+          <RouterLink class="py-2 px-4 rounded-md" to="/my-wraps" replace>My Wraps</RouterLink>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
       <NavigationMenuItem>
         <NavigationMenuLink>
-          <RouterLink class="bg-green-600 py-2 px-4 rounded-md" to="/login" replace>Login</RouterLink>
+          <RouterLink class="py-2 px-4 rounded-md" to="/top-artists" replace>Top Artists</RouterLink>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
       <NavigationMenuItem>
         <NavigationMenuLink>
-          <RouterLink class="bg-green-600 py-2 px-4 rounded-md" to="/register" replace>Sign Up</RouterLink>
+          <RouterLink class="py-2 px-4 rounded-md" to="/friends" replace>Friends</RouterLink>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
