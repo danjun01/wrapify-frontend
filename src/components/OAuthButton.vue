@@ -5,10 +5,11 @@ import { ref, watch } from 'vue';
 const redirect_uri = 'http://localhost:5173/auth/callback';
 const client_id = ref(localStorage.getItem('client_id') || '');
 const authUrl = ref('');
+const scope = "user-top-read user-read-recently-played"
 
 const assembleAuthUrl = () => {
   if (client_id.value) {
-    authUrl.value = `https://accounts.spotify.com/authorize?response_type=code&client_id=${localStorage.getItem('client_id')}&redirect_uri=${redirect_uri}`;
+    authUrl.value = `https://accounts.spotify.com/authorize?response_type=code&client_id=${localStorage.getItem('client_id')}&redirect_uri=${redirect_uri}&scope=${scope}`;
     console.log('assembled url: ', authUrl);
   }
   else {
