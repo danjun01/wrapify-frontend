@@ -2,8 +2,10 @@ import { createApp } from 'vue'
 import './assets/main.css'
 import App from './App.vue'
 import { createWebHistory, createRouter } from 'vue-router';
+import { createPinia } from 'pinia';
 import HomeView from './pages/HomeView.vue';
 import SpotifyAuthRedirect from './pages/SpotifyAuthRedirect.vue';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 
 
 const routes = [
@@ -26,6 +28,10 @@ const routes = [
     },
   });
 
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
+
 createApp(App)
     .use(router)
+    .use(pinia)
     .mount('#app')
