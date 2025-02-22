@@ -1,18 +1,11 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import {
-  NavigationMenu,
-  // NavigationMenuContent,
-  // NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  // NavigationMenuTrigger,
-  // NavigationMenuViewport,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
 import OAuthButton from './OAuthButton.vue';
-import { onBeforeMount, ref, watch } from 'vue';
+import { useAuthStore } from '@/stores/auth';
+import AccountMenu from './AccountMenu.vue';
+
+const authStore = useAuthStore();
+
 </script>
 
 <template>
@@ -21,7 +14,7 @@ import { onBeforeMount, ref, watch } from 'vue';
         <h1 class="font-bold text-3xl">Wrapify</h1>
       </RouterLink>
 
-      <OAuthButton />
-
+      <OAuthButton v-if="!authStore.isAuthenticated" />
+      <AccountMenu v-else />
   </div>
 </template>

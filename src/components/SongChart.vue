@@ -9,9 +9,10 @@ import {
 } from "@/components/ui/table"
 import axios from "axios";
 import { onMounted, ref } from 'vue';
-import Button from "./ui/button/Button.vue";
+import { useAuthStore } from "@/stores/auth";
 
-const access_token = ref(localStorage.getItem('access_token') || '');
+const authStore = useAuthStore();
+
 const topTracks = ref([]);
 const getTopTracks = async () => {
     const res = await axios.get('https://api.spotify.com/v1/me/top/tracks', {
@@ -20,7 +21,7 @@ const getTopTracks = async () => {
             'limit': '15'
         },
         headers: {
-            "Authorization": `Bearer ${access_token.value}`
+            "Authorization": `Bearer ${authStore.access_token}`
         }
     });
     console.log('RESPONSE \n-------------------------------------------\n\n',res.data);
