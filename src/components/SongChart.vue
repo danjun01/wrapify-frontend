@@ -45,7 +45,7 @@ onMounted(getTopTracks);
             </TableRow>
         </TableHeader>
         <TableBody>
-            <TableRow v-for="(track, index) in topTracks" :key="index">
+            <TableRow v-for="(track, index) in topTracks" :key="index" class="border-none">
                 <TableCell class="text-center">
                     {{index + 1}}
                 </TableCell>
