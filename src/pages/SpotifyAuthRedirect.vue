@@ -46,7 +46,7 @@ async function exchangeAuthCodeForToken(code: string) {
 async function getUserProfile() {
   try {
     console.log('Getting user profile');
-    const response = await axios.get('http://localhost:8000/api/user/', {
+    const response = await axios.get('http://localhost:8000/api/spotify/me', {
       params: { access_token: authStore.access_token }
     });
     console.log(response);
