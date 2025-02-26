@@ -6,10 +6,12 @@ import { createPinia } from 'pinia';
 import HomeView from './pages/HomeView.vue';
 import SpotifyAuthRedirect from './pages/SpotifyAuthRedirect.vue';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
+import SignUpView from './pages/SignUp.vue';
 
 
 const routes = [
     { path: '/', component: HomeView },
+    { path: '/signup', component: SignUpView },
     { path: '/auth/callback', component: SpotifyAuthRedirect}
   ]
   
