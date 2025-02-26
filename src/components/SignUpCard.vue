@@ -1,14 +1,5 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button';
-import { 
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
@@ -16,7 +7,7 @@ import { Label } from '@/components/ui/label';
 
 <template>
     <div class="w-[400px] border-none px-5 flex flex-col justify-center pt-20 text-platinum">
-        <div class="justify-self-center text-orange-web text-6xl font-extrabold">Sign Up</div>
+        <div class="text-platinum text-6xl font-extrabold">Sign Up</div>
         <form class="pt-20">
           <div class="grid items-center w-full gap-5">
 
