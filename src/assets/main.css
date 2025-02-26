@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-eerie-black: #1d1e20;
+  --color-orange-web: #fca311;
+  --color-platinum: #e5e5e5;
+  --color-cardinal: rgb(209, 17, 73);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
